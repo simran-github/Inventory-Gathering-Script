@@ -1,0 +1,24 @@
+Authors: Chinmay Gawde (mail: chinmay.gawde@nutanix.com, slack: @cg) and Simran Sunil (mail: simran.sunil@nutanix.com, slack: @simran.sunil)
+
+*** Inventory Gathering Script Guidelines ***
+
+This Script will be used to gather inventory details for all the cluster which are registered under one Prism Central. 
+
+1) All the variables such as PC name, cluster name and Credenials are dynamic i.e. you will be prompted to provide them while running the script. Hence DO NOT EDIT the script variables inside the code
+
+2) Have the following python libraries pre-installed before running the script: ("openpyxl", "requests", "maskpass"). Also install one of the recent python versions (preferrably 3.9 or later)
+
+3) To fetch the inventory, run the "main.py" script using python. Example: "python3 main.py" on the terminal
+
+
+Important Prerequisites before running the script:
+
+1) The machine/jumpbox/vm from where the script is running should have access to all the prism element IPs as well as Prism Central IP/domain (It should  be able to ping them)
+
+2) Before running the script, in order fetch all the details, have LCM Inventory run atleast once after cluster creation on all clusters via the Prism Element LCM console. Else script may run into fatal errors
+
+3) Make sure the credentials you use have minimum Admin Prism access.
+
+
+For any queries or difficulties while running the script please contact us.
+
